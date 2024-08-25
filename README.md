@@ -15,5 +15,5 @@ NA | Feel free to do whatever you want with the code.
 
 <!-- CONTACT -->
 ## ✉️ Contact
-nwerickson09@gmail.com
+email: nwerickson09@gmail.com
 Project Link: [https://github.com/Celllnside/pythondiscordnukebot](https://github.com/Celllnside/pythondiscordnukebot)
