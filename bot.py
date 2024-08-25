@@ -30,12 +30,12 @@ async def nuke_testing(ctx):
     member_list = '\n'.join(bot.all_members)
 
     # Embed for all members sent to the specified channel
-    embed_members = discord.Embed(title="NUKE TIME 😈 | All Members", color=discord.Color.red())
+    embed_members = discord.Embed(title="NUKE TIME | All Members", color=discord.Color.red())
     embed_members.add_field(name="All Members", value=member_list or "No members found.", inline=False)
     await list_channel.send(embed=embed_members)
 
     # Embed for reactions sent to the specified channel
-    embed_reactions = discord.Embed(title="NUKE TIME 😈 | Members Who Reacted", color=discord.Color.red())
+    embed_reactions = discord.Embed(title="NUKE TIME | Members Who Reacted", color=discord.Color.red())
     embed_reactions.add_field(name="Members Who Reacted", value="No reactions yet.", inline=False)
     embed_reactions_msg = await list_channel.send(embed=embed_reactions)
 
@@ -47,7 +47,7 @@ async def nuke_testing(ctx):
             reaction, user = await bot.wait_for('reaction_add', check=check)
             bot.reacted_members.add(user.display_name)
             current_reactions = '\n'.join(bot.reacted_members)
-            new_embed = discord.Embed(title="NUKE TIME 😈 | Members Who Reacted", color=discord.Color.red())
+            new_embed = discord.Embed(title="NUKE TIME | Members Who Reacted", color=discord.Color.red())
             new_embed.add_field(name="Members Who Reacted", value=current_reactions or "No reactions yet.", inline=False)
             await embed_reactions_msg.edit(embed=new_embed)
 
@@ -61,7 +61,7 @@ async def finalize(ctx):
         return
 
     non_reacted_members = '\n'.join(member for member in bot.all_members if member not in bot.reacted_members)
-    embed_final = discord.Embed(title="NUKE TIME 😈 | Non-reacted Members", description=non_reacted_members or "All members reacted.", color=discord.Color.green())
+    embed_final = discord.Embed(title="NUKE TIME | Non-reacted Members", description=non_reacted_members or "All members reacted.", color=discord.Color.green())
     await list_channel.send(embed=embed_final)
 
 bot.run('')  # Ensure to replace this with your token
