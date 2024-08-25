@@ -1,3 +1,5 @@
+
+
 # pythondiscordnukebot
 <!-- ABOUT THE PROJECT -->
 This is a python bot for discord i made that will give you a list of non-reactors.
@@ -15,5 +17,5 @@ NA | Feel free to do whatever you want with the code.
 
 <!-- CONTACT -->
 ## ✉️ Contact
-email: nwerickson09@gmail.com
+email: nwerickson09@gmail.com<br>
 Project Link: [https://github.com/Celllnside/pythondiscordnukebot](https://github.com/Celllnside/pythondiscordnukebot)
